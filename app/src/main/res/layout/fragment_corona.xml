@@ -12,11 +12,32 @@
         android:layout_width ="match_parent"
         android:layout_height ="match_parent"
         >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/headercovid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="RamdhanApps"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textColor="#69C464"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <ImageView
+            android:layout_below="@id/headercovid"
             android:id="@+id/gambarcovid"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="149dp"
             android:background="@drawable/wallpaper"
             android:scaleType="fitStart" />
 
@@ -26,12 +47,26 @@
             android:layout_width ="match_parent"
             android:layout_height ="wrap_content"
             android:scrollbars ="vertical"
-            android:background="#72c457"/>
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id ="@+id/listCoronaIndonesiaProvinsi"-->
-<!--            android:layout_below="@id/listCoronaIndonesia"-->
-<!--            android:layout_width ="match_parent"-->
-<!--            android:layout_height ="wrap_content"-->
-<!--            android:scrollbars ="vertical" />-->
+            android:background="#69C464"/>
+
+
+        <Button
+            android:id="@+id/maps_rs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listCoronaIndonesia"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="281dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_rounded"
+            android:hint="Rumah Sakit Terdekat"
+            android:textColorHint="#FFFFFF"
+
+            />
+
+
     </RelativeLayout >
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout >

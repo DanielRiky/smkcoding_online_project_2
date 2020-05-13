@@ -1,4 +1,7 @@
 package com.example.chalenge2
+
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log.i
 import android.view.LayoutInflater
@@ -11,6 +14,7 @@ import data.CoronaService
 import data.apiRequest
 import data.httpClient
 import kotlinx.android.synthetic.*
+
 import kotlinx.android.synthetic.main.fragment_corona.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,6 +39,16 @@ class CoronaFragment : Fragment(){
     ) {
         super .onViewCreated(view, savedInstanceState)
         callApiCoronaIndonesia()
+        maps_rs.setOnClickListener { rsterdekat() }
+        //corona_provinsi.setOnClickListener { fragmentprov()}
+
+    }
+
+
+
+    private fun rsterdekat() {
+        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/rumah+sakit+terdekat/@-7.9378234,112.6141153,13z/data=!3m1!4b1"))
+        startActivity(i)
     }
 
     private fun callApiCoronaIndonesia() {
@@ -69,15 +83,17 @@ class CoronaFragment : Fragment(){
 
 
     private fun tampilCoronaIndonesia(CoronaIndonesia: List<CoronaIndonesiaItem>) {
-        listCoronaIndonesia. layoutManager = LinearLayoutManager( context )
-        listCoronaIndonesia. adapter = CoronaIndonesiaAdapter( context !!, CoronaIndonesia) {
+        listCoronaIndonesia.layoutManager = LinearLayoutManager( context )
+        listCoronaIndonesia.adapter = CoronaIndonesiaAdapter( context !!, CoronaIndonesia) {
             val indonesiaSaja = it
             tampilToast(context!!, indonesiaSaja.name )
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         this.clearFindViewByIdCache()
     }
 
 }
+

@@ -32,4 +32,6 @@ class HomeFragment : Fragment(){
         val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/masjid+terdekat/@-7.9450613,112.6408638,15z/data=!3m1!4b1"))
         startActivity(i)
     }
+
+
 }
