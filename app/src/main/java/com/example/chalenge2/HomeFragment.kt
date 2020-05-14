@@ -25,7 +25,7 @@ class HomeFragment : Fragment(){
         @Nullable savedInstanceState: Bundle?
     ) {
         super .onViewCreated(view, savedInstanceState)
-        testing.setOnClickListener { cobalink() }
+
     }
 
     private fun cobalink() {

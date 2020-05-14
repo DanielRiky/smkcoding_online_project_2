@@ -1,21 +1,22 @@
 package com.example.chalenge2
 
+import Attributess
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log.i
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation. Nullable
+import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import data.CoronaService
+import data.ProvinsiService
 import data.apiRequest
 import data.httpClient
 import kotlinx.android.synthetic.*
-
 import kotlinx.android.synthetic.main.fragment_corona.*
+import provinsiItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,7 +40,8 @@ class CoronaFragment : Fragment(){
     ) {
         super .onViewCreated(view, savedInstanceState)
         callApiCoronaIndonesia()
-        maps_rs.setOnClickListener { rsterdekat() }
+        callApiCoronaProvinsi()
+
         //corona_provinsi.setOnClickListener { fragmentprov()}
 
     }
@@ -89,6 +91,49 @@ class CoronaFragment : Fragment(){
             tampilToast(context!!, indonesiaSaja.name )
         }
     }
+
+    private fun callApiCoronaProvinsi() {
+        showLoading ( context !!, swipeRefreshLayout)
+        val httpClient = httpClient()
+        val apiRequest = apiRequest<ProvinsiService>(httpClient)
+       val call = apiRequest.getProv()
+        call.enqueue( object : Callback<List<provinsiItem>> {
+            override fun onFailure(call: Call<List<provinsiItem>>, t: Throwable) {
+                dismissLoading (swipeRefreshLayout)
+            }
+            override fun onResponse(call: Call<List<provinsiItem>>, response:
+            Response<List<provinsiItem>>
+            ) {
+                dismissLoading (swipeRefreshLayout)
+                when {
+                    response. isSuccessful ->
+                        when {
+                            response.body()?. size != 0 ->
+                                tampilCoronaProvinsi(response.body()!!)
+                            else -> {
+                                tampilToast ( context !!, "Berhasil" )
+                            }
+                        }
+                    else -> {
+                        tampilToast ( context !!, "Gagal" )
+                    }
+                }
+            }
+        })
+    }
+
+
+
+
+
+    private fun tampilCoronaProvinsi(coronaProvinsi: List<provinsiItem>) {
+        listCoronaProvinsi.layoutManager = LinearLayoutManager( context )
+        listCoronaProvinsi.adapter = CoronaProvinsiAdapter( context !!, coronaProvinsi) {
+            val provinsi = it
+            tampilToast(context!!, provinsi.attributess.provinsi)
+        }
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()

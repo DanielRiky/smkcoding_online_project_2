@@ -11,6 +11,7 @@
     <RelativeLayout
         android:layout_width ="match_parent"
         android:layout_height ="match_parent"
+        android:background="#F4F4F4"
         >
         <androidx.cardview.widget.CardView
             android:id="@+id/headercovid"
@@ -47,25 +48,101 @@
             android:layout_width ="match_parent"
             android:layout_height ="wrap_content"
             android:scrollbars ="vertical"
-            android:background="#69C464"/>
+            android:background="@drawable/wallpapercovid"/>
 
 
-        <Button
-            android:id="@+id/maps_rs"
+        <TextView
+            android:id="@+id/judul_provinsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Penyeberan Covid-19 di Indonesia"
             android:layout_below="@id/listCoronaIndonesia"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="281dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/button_rounded"
-            android:hint="Rumah Sakit Terdekat"
-            android:textColorHint="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="#FF454545"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"/>
 
-            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/header_provinsi"
+            android:layout_below="@id/judul_provinsi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="12dp"
+
+            android:layout_margin="18dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="115dp"
+                    android:text="Provinsi"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FF454545"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Positif"
+                    android:width="75dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FF454545"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Sembuh"
+                    android:width="75dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FF454545"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Meninggal"
+                    android:width="100dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FF454545"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id ="@+id/listCoronaProvinsi"
+            android:layout_below="@id/header_provinsi"
+            android:layout_width ="match_parent"
+            android:layout_height ="wrap_content"
+            android:scrollbars ="vertical"
+            android:background="#F4F4F4"
+           />
+<!--        <Button-->
+<!--            android:id="@+id/maps_rs"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/listCoronaIndonesia"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:layout_marginTop="281dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginRight="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@drawable/button_rounded"-->
+<!--            android:hint="Rumah Sakit Terdekat"-->
+<!--            android:textColorHint="#FFFFFF"-->
+
+<!--            />-->
 
 
     </RelativeLayout >
