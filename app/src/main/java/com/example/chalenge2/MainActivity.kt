@@ -9,8 +9,8 @@
 
     class MainActivity : AppCompatActivity() {
 
-        val menuTeks = arrayOf ( "Home" ,"Salat", "Covid-19" )
-        val manuIcon = arrayOf (R.drawable.ic_home , R.drawable.ic_mosque,R.drawable.ic_corona)
+        val menuTeks = arrayOf ( "Home" ,"Salat", "Covid-19", "Dzikir" )
+        val manuIcon = arrayOf (R.drawable.ic_home , R.drawable.ic_mosque,R.drawable.ic_corona, R.drawable.ic_tasbih)
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)

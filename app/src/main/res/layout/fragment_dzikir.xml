@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headercovid"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="RamdhanApps"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="#69C464"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/zikir">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/wirit"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_dzikir"
+                android:hint="Kembali"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColorHint="#FF9800" />
+            <Button
+                android:id="@+id/btnplus"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="@drawable/button_dzikir"
+                android:hint="tambah"
+                android:textColorHint="#4CAF50" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

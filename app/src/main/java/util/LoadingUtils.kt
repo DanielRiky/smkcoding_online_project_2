@@ -15,3 +15,4 @@ fun dismissLoading(swipeRefreshLayout: SwipeRefreshLayout) {
     swipeRefreshLayout. isRefreshing = false
     swipeRefreshLayout. isEnabled = false
 }
+
