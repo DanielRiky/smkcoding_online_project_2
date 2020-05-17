@@ -7,3 +7,4 @@ smkcoding online chalenge 2
 ![Home](https://user-images.githubusercontent.com/43564337/82136401-f2a8e680-9837-11ea-8767-e7597fb4a697.jpg)
 ![Masjid Terdekat](https://user-images.githubusercontent.com/43564337/82136402-f63c6d80-9837-11ea-87cf-a2cfcda92ef8.jpg)
 ![Salat](https://user-images.githubusercontent.com/43564337/82136403-f89ec780-9837-11ea-9046-5a60c9f3c1e4.jpg)
+https://drive.google.com/drive/folders/1DFmV_AsK3VGT3g2O2pTqcF_-DpGqz7JW?usp=sharing
