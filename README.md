@@ -1,6 +1,6 @@
 # smkcoding_online_project_2
-smkcoding online chalenge 2
-Berikut ini adalah hasil screenshot aplikasi saya
+
+Berikut ini adalah hasil screenshot aplikasi yang saya buat 
 
 1. Menu Home
 ![Home](https://user-images.githubusercontent.com/43564337/82136401-f2a8e680-9837-11ea-8767-e7597fb4a697.jpg)
