@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "533086383734",
+    "firebase_url": "https://chalenge2-fa5c5.firebaseio.com",
+    "project_id": "chalenge2-fa5c5",
+    "storage_bucket": "chalenge2-fa5c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533086383734:android:307b65b638d0388550b957",
+        "android_client_info": {
+          "package_name": "com.example.chalenge2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533086383734-f0oamodtn31c777au199772egiuagj95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chalenge2",
+            "certificate_hash": "05f6959378b0e79894d4747c1324d938ad3fc142"
+          }
+        },
+        {
+          "client_id": "533086383734-s3ogn1014m9o5rslg1pe0a86k6qshja8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiwVKm6cGi0vdlxpRZshCPlDZXCWuWoso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533086383734-s3ogn1014m9o5rslg1pe0a86k6qshja8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
