@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">RamadhanApp</string>
-    <string name="facebook_app_id">567569470589131</string>
-    <string name="fb_login_protocol_scheme">fb567569470589131</string>
-
 </resources>

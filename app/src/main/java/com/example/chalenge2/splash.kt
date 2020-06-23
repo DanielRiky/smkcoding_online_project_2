@@ -14,7 +14,7 @@ class splash : Activity() {
         handler.postDelayed({
             //val intent = Intent(this@SplashActivity, MainActivity::class.java)
             //startActivity(intent)
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this,MainActivity::class.java))
             finish()
         }, 3000)
     }

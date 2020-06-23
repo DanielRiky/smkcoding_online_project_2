@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.annotation. Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.auth.FirebaseAuth
 import coronaNegaraItem
 import data.NegaraService
 import data.apiRequest
@@ -41,7 +40,6 @@ class HomeFragment : Fragment(){
         callApiCoronaNegara()
         donasi.setOnClickListener { donasi() }
         about.setOnClickListener { about() }
-
     }
 
     private fun about(){
@@ -102,8 +100,5 @@ class HomeFragment : Fragment(){
         super.onDestroy()
         this.clearFindViewByIdCache()
     }
-
-
-
 
 }
