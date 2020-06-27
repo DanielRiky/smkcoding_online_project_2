@@ -3,6 +3,7 @@ package com.example.chalenge2
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,8 +20,9 @@ import kotlinx.android.synthetic.main.fragment_user.*
 
 class UserFragment : Fragment(){
 
-
-
+    private lateinit var auth: FirebaseAuth
+    private var fStateListener: FirebaseAuth.AuthStateListener? = null
+    var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super .onCreate(savedInstanceState)
@@ -38,7 +40,22 @@ class UserFragment : Fragment(){
     ) {
         super .onViewCreated(view, savedInstanceState)
 
+        cekLogin()
         logoutbtn.setOnClickListener { signOut() }
+    }
+
+    private fun cekLogin() {
+        firebaseAuth = FirebaseAuth.getInstance()
+        var dani = firebaseAuth?.currentUser
+        if (firebaseAuth!!.currentUser == null) {
+            var  intent = Intent(context, LoginActivity::class.java)
+            startActivity(intent)
+        } else {
+            nama_user.text = dani?.displayName
+            //Jika sudah login langsung dilempar ke MainActivity
+            Log.d("daniel",dani?.displayName)
+
+        }
     }
 
     private fun signOut() {

@@ -85,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
             }
             .addOnSuccessListener { result ->
 
-                Toast.makeText(this, "Kamu Masuk Dengan Email :  ", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Selamat Datang", Toast.LENGTH_LONG)
                     .show()
                 intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
